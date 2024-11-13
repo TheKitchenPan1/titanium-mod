@@ -1,4 +1,13 @@
 {
   "item.ti_mod.titanium": "Titanium",
-  "item.ti_mod.raw_titanium": "Raw Titanium"
+  "item.ti_mod.raw_titanium": "Raw Titanium",
+
+  "block.ti_mod.titanium_block": "Block of Titanium",
+  "block.ti_mod.titanium_ore": "Titanium Ore",
+  "block.ti_mod.titanium_deepslate_ore": "Deepslate Titanium Ore",
+  "block.ti_mod.raw_titanium_block": "Block of Raw Titanium",
+
+
+  "creativetab.titanium_items": "Titanium Items",
+  "creativetab.titanium.blocks": "Titanium Blocks"
 }

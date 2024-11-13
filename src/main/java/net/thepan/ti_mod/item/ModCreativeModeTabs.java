@@ -8,6 +8,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.thepan.ti_mod.TitaniumMod;
+import net.thepan.ti_mod.block.ModBlocks;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -19,6 +20,17 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.TITANIUM.get());
                         output.accept(ModItems.RAW_TITANIUM.get());
+                    })
+
+                    .build());
+    public static final RegistryObject<CreativeModeTab> TITANIUM_BLOCKS_TAB = CREATIVE_MODE_TABS.register("titanium_blocks_tab" ,
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.TITANIUM_BLOCK.get())).withTabsBefore(TITANIUM_ITEMS_TAB.getId())
+                    .title(Component.translatable("Titanium"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.TITANIUM_BLOCK.get());
+                        output.accept(ModBlocks.TITANIUM_ORE.get());
+                        output.accept(ModBlocks.TITANIUM_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.RAW_TITANIUM_BLOCK.get());
                     })
 
                     .build());
